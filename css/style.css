@@ -1,6 +1,6 @@
 html {
   font-family: 'Mina', sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   box-sizing: border-box;
 }
 
@@ -122,6 +122,7 @@ html, body {
 }
 
 .about-contents {
+  padding: 1em;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -140,6 +141,7 @@ html, body {
 
 .about-text {
   text-align: center;
+  width: 90%;
   max-width: 35em;
   line-height: 1.5em;
 }
@@ -152,7 +154,6 @@ html, body {
 
 .about-description {
   padding: 0;
-  margin: 0;
 }
 
 .divider {
@@ -168,10 +169,20 @@ html, body {
   border-color: #D13711;
 }
 
-.about-devicons {
+.about-socialIcons {
   font-size: 2rem;
   word-spacing: 0.5em;
 }
+
+.about-link, .about-link:visited {
+  color: #2A324B;
+  text-decoration: none;
+}
+.about-link:hover, .about-link:active {
+  color: #D13711;
+}
+
+
 
 .projects {
   color: #D13711;
@@ -320,14 +331,6 @@ html, body {
   margin-top: 1em;
 }
 
-.footer1-link, .footer1-link:visited {
-  text-decoration: none;
-  color: #D13711;
-}
-.footer1-link:hover, .footer1-link:active {
-  color: #2A324B;
-}
-
 .footer2 {
   background-color: #D13711;
   color: #FFDAC0;
@@ -336,6 +339,9 @@ html, body {
 }
 
 @media screen and (min-width: 600px){
+  html {
+    font-size: 20px;
+  }
   .header-portrait {
     height: 2.5em;
   }
