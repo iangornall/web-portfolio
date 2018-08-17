@@ -13,8 +13,8 @@ var scrollingLinkHandler = (event) => {
 navButtons.forEach(navButton => {
     navButton.addEventListener('click', scrollingLinkHandler);
 });
-profileLink.addEventListener('click', scrollingLinkHandler);
 
+profileLink.addEventListener('click', scrollingLinkHandler);
 
 scrollingContent.addEventListener('scroll', function(e){
     for(var i = 0; i < sections.length; i++){
