@@ -308,7 +308,6 @@ figure {
   opacity: 0.8;
 }
 
-
 .contact-input::-ms-input-placeholder{
   color: var(--lt-orange);
   opacity: 0.8;
@@ -356,7 +355,7 @@ figure {
   margin-bottom: 10px;
 }
 
-.footer1-devicons, .footer1-socialicons {
+.footer1-devicons, .footer1-socialicons, .modal-devIcon-container {
   font-size: 1.5rem;
   word-spacing: 0.5rem;
   line-height: 2.5rem;
@@ -389,6 +388,8 @@ figure {
   height: 100%;
   display: flex;
   flex-direction: column;
+  transition: opacity 200ms ease-in, transform 300ms;
+  pointer-events: auto;
 }
 .modal-image-container {
   display: flex;
@@ -405,9 +406,10 @@ figure {
 .modal-text-container {
   flex-basis: 34%;
   height: 100%;
-  background: var(--white-orange);
+  background: #FFF;
   color: var(--dk-blue);
   padding: 0 1em;
+  overflow-y: auto;
 }
 .modal-name {
   font-size: 1.5rem;
@@ -429,15 +431,37 @@ figure {
 .modal-link:hover {
   text-decoration: underline;
 }
-.modal-description {
-  padding-bottom: 1.5em;
+.modal-list {
+  margin: 0;
+}
+.modal-item {
+  margin: 0.5em;
 }
 
 .modal-devIcon-container {
-  padding-bottom: 1.5em;
-  font-size: 1.5rem;
+  letter-spacing: 0.5em;
   text-align: center;
   color: var(--dk-orange);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dev-icon-box {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 3rem;
+}
+
+.dev-icon {
+  transform: translateX(0.35rem);
+}
+
+.dev-icon-text {
+  letter-spacing: initial;
+  font-size: 0.5rem;
+  line-height: initial;
 }
 
 .modal-up, .modal-down {
@@ -445,11 +469,12 @@ figure {
   left: 50%;
   width: 2em;
   height: 2em;
-  background: var(--dk-blue);
+  background: var(--dk-orange);
   color: var(--white-orange);
   padding: 0.5em;
   border-radius: 50%;
   cursor: pointer;
+  transition: transform 300ms;
 }
 
 .modal-up {
@@ -457,9 +482,17 @@ figure {
   transform: translate(-50%, -125%);
 }
 
+.modal-up:hover {
+  transform: scale(1.5) translate(-32.5%, -93.75%);
+}
+
 .modal-down {
   top: 100%;
   transform: translate(-50%, 25%);
+}
+
+.modal-down:hover {
+  transform: scale(1.5) translate(-32.5%, 18.75%);
 }
 
 .cover {
@@ -472,8 +505,23 @@ figure {
   background: var(--dk-blue);
 }
 
+.above {
+  transform: translateY(-100%);
+}
+
+.below {
+  transform: translateY(100%);
+}
+
+.center {
+  transform: translateY(0);
+}
+
 .hide {
   opacity: 0;
+  pointer-events: none;
+}
+.pointer-fix {
   pointer-events: none;
 }
 

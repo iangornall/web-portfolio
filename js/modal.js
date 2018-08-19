@@ -1,14 +1,13 @@
-var devicons = {
-  python: 'devicon-python-plain'
-}
-
 var showModal = i => {
   var cover = document.querySelector('.cover');
   cover.classList.remove('hide');
   var modalContainer = document.querySelector('.modal-container');
   modalContainer.classList.remove('hide');
   var modals = document.querySelectorAll('.modal');
+  modals[(i + 1) % projectData.length].classList.add('above');
+  modals[i].classList.add('center');
   modals[i].classList.remove('hide');
+  modals[(projectData.length + i - 1) % projectData.length].classList.add('below');
 }
 
 var hideModal = () => {
@@ -19,6 +18,7 @@ var hideModal = () => {
   var modals = document.querySelectorAll('.modal');
   for (modal of modals) {
     modal.classList.add('hide');
+    modal.classList.remove('center', 'above', 'below');
   }
 }
 
@@ -41,7 +41,19 @@ projectData.forEach((project, index) => {
   var modalImage = document.createElement('img');
   modalImage.classList.add('modal-image');
   modalImage.setAttribute('src', project.image);
-  modalImageContainer.appendChild(modalImage);
+  if (!project.video) {
+    modalImageContainer.appendChild(modalImage);
+  } 
+  else {
+    var modalVideo = document.createElement('iframe');
+    modalVideo.setAttribute('width', '100%');
+    modalVideo.setAttribute('height', '100%');
+    modalVideo.setAttribute('frameborder', '0');
+    modalVideo.setAttribute('allowfullscreen', true);
+    modalVideo.setAttribute('src', project.video);
+    modalVideo.appendChild(modalImage);
+    modalImageContainer.appendChild(modalVideo);
+  }
   modal.appendChild(modalImageContainer);
 
   var modalTextContainer = document.createElement('div');
@@ -63,21 +75,46 @@ projectData.forEach((project, index) => {
   }
   modalTextContainer.appendChild(modalLinks);
 
-  var modalDescription = document.createElement('div');
-  modalDescription.classList.add('modal-description');
-  modalDescription.textContent = project.description;
-  modalTextContainer.appendChild(modalDescription);
-
   var modalDevIconContainer = document.createElement('div');
   modalDevIconContainer.classList.add('modal-devIcon-container');
 
-  for (devIcon of project.devicons){
+  for (let devIcon of project.devicons){
+    var devIconBox = document.createElement('div');
+    devIconBox.classList.add('dev-icon-box');
     var devIconElement = document.createElement('i');
-    devIconElement.classList.add(devicons[devIcon])
-    modalDevIconContainer.appendChild(devIconElement);
+    console.log(devIcon, devicons[devIcon])
+    devIconElement.classList.add(devicons[devIcon].icon, 'dev-icon');
+    devIconBox.appendChild(devIconElement);
+    var devIconText = document.createElement('p');
+    devIconText.textContent = devicons[devIcon].text;
+    devIconText.classList.add('dev-icon-text')
+    devIconBox.appendChild(devIconText);
+    modalDevIconContainer.appendChild(devIconBox);
   }
 
   modalTextContainer.appendChild(modalDevIconContainer);
+
+  var modalDescription = document.createElement('div');
+  modalDescription.classList.add('modal-description');
+
+  for (let paragraph of project.description) {
+    var modalParagraph = document.createElement('p');
+    modalParagraph.textContent = paragraph;
+    modalDescription.appendChild(modalParagraph);
+  }
+  modalTextContainer.appendChild(modalDescription);
+
+  if (project.list) {
+    var modalResList = document.createElement('ul');
+    modalResList.classList.add('modal-list');
+    for (let listItem of project.list) {
+      var modalResItem = document.createElement('li');
+      modalResItem.classList.add('modal-item');
+      modalResItem.textContent = listItem;
+      modalResList.appendChild(modalResItem);
+    }
+    modalTextContainer.appendChild(modalResList);
+  }
 
   modal.appendChild(modalTextContainer);
 
