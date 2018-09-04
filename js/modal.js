@@ -71,6 +71,7 @@ projectData.forEach((project, index) => {
     modalLink.classList.add('modal-link');
     modalLink.textContent = link.name;
     modalLink.setAttribute('href', link.src);
+    modalLink.setAttribute('target', '_blank');
     modalLinks.appendChild(modalLink);
   }
   modalTextContainer.appendChild(modalLinks);
@@ -146,5 +147,3 @@ projectData.forEach((project, index) => {
 });
 
 var modals = document.querySelectorAll('.modal');
-
-console.log(modals);

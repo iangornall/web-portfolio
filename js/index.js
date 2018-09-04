@@ -7,7 +7,6 @@ var headerPortrait = document.querySelector('.header-portrait');
 var portrait = document.querySelector('.about-portrait');
 var scrollingLinkHandler = (event) => {
     event.preventDefault();
-    console.log(event.currentTarget.getAttribute('href'))
     scrollTransition(event.currentTarget.getAttribute('href').slice(1));
 }
 navButtons.forEach(navButton => {
@@ -59,3 +58,26 @@ function scrollTransition(destination){
         }
     },10);
 }
+
+let tooltip = document.createElement('div');
+tooltip.classList.add('tooltip');
+let createTooltip = (query, text) => {
+    let targetElement = document.querySelector(query);
+    targetElement.addEventListener('mouseover', event => {
+        tooltip.textContent = text;
+        event.currentTarget.appendChild(tooltip);
+    });
+    targetElement.addEventListener('mouseout', event => {
+        tooltip.remove();
+    });
+}
+createTooltip('.devicon-amazonwebservices-original', 'Amazon Web Services');
+createTooltip('.devicon-express-original', 'Express');
+createTooltip('.devicon-git-plain', 'Git');
+createTooltip('.devicon-nodejs-plain', 'Node.js');
+createTooltip('.devicon-postgresql-plain', 'PostgreSQL');
+createTooltip('.devicon-python-plain', 'Python');
+createTooltip('.devicon-react-original', 'React.js');
+createTooltip('.devicon-html5-plain', 'HTML5');
+createTooltip('.devicon-css3-plain', 'CSS3');
+createTooltip('.devicon-javascript-plain', 'JavaScript');

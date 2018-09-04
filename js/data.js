@@ -30,10 +30,44 @@ var devicons = {
   jquery: {
     icon: 'devicon-jquery-plain',
     text: 'jQuery'
+  },
+  aws: {
+    icon: 'devicon-amazonwebservices-original',
+    text: 'Amazon Web Services'
+  },
+  express: {
+    icon: 'devicon-express-original',
+    text: 'Express'
+  },
+  nodejs: {
+    icon: 'devicon-nodejs-plain',
+    text: 'Node.js'
+  },
+  postgresql: {
+    icon: 'devicon-postgresql-plain',
+    text: 'PostgreSQL'
+  },
+  react: {
+    icon: 'devicon-react-original',
+    text: 'React.js'
   }
 }
 
 var projectData = [
+  { image: 'images/color-addiction.png',
+    thumbnail: 'images/color-addiction-thumb.png',
+    video: '',
+    name: 'Color Addiction',
+    links: [
+      {name: 'Live Site', src: 'http://coloraddiction.iangornall.com'},
+      {name: 'Github', src: 'https://github.com/iangornall/color-addiction'}
+    ],
+    description: ['Collaboration built on Express and PostgreSQL.', 'Personal Responsibilities:'],
+    list: ['Created routes and queries to for handling scores in database', 'Implemented interact.js drag and drop and color mixing libraries', 'Set up scoring system with timers'],
+    devicons: [
+      'nodejs', 'express', 'postgresql', 'git'
+    ]
+  },
   { image: 'images/hidden-gems.png',
     thumbnail: 'images/hidden-gems-thumb.png',
     video: '',
