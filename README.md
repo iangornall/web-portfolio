@@ -3,9 +3,7 @@ This is a personal portfolio page built with plain HTML, CSS, and JavaScript.
 
 ## Features
 ##### Video of scroll
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=gI0dTMI-eo4
-" target="_blank"><img src="https://www.iangornall.com/video/scroll.gif" 
-alt="Video of Scroll Feature" width="240" height="180" border="10" /></a>
+![Video of scroll](/videos/scroll.gif)
 ##### Function
 Provides user with smooth scrolling transition on clicking a link within the page.
 ##### Code
