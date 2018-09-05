@@ -3,7 +3,7 @@ This is a personal portfolio page built with plain HTML, CSS, and JavaScript.
 
 ## Features
 ##### Video of scroll
-![Video of scroll](/videos/scroll.gif)
+![Video of scroll](./video/scroll.gif)
 ##### Function
 Provides user with smooth scrolling transition on clicking a link within the page.
 ##### Code
