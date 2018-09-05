@@ -27,7 +27,7 @@ let createTooltip = (query, text) => {
 }
 ```
 
-### Scroll
+### Auto Scroll
 ![Video of scroll](./video/scroll.gif)
 #### Description
 Provides user with smooth scrolling transition on clicking a link within the page.
