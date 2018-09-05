@@ -4,14 +4,14 @@ This is a personal portfolio page built with plain HTML, CSS, and JavaScript.
 ## Features
 ### Modals
 ![Video of modals](./video/modals.gif)
-#### Function
+#### Description
 Provides user with extra information about each project.
 ##### Code
 [JS file on github](./js/modal.js)
 
 ### Tooltips
 ![Video of tooltips](./video/tooltips.gif)
-#### Function
+#### Description
 Provides user with information about development icons.
 ##### Code
 ```Javascript
@@ -29,7 +29,7 @@ let createTooltip = (query, text) => {
 
 ### Scroll
 ![Video of scroll](./video/scroll.gif)
-#### Function
+#### Description
 Provides user with smooth scrolling transition on clicking a link within the page.
 ##### Code
 ```Javascript
@@ -55,7 +55,7 @@ function scrollTransition(destination){
 ```
 ### Responsive menu
 ![Video of mobile menu](./video/menu.gif)
-#### Function
+#### Description
 Provides user with accessible menu for mobile.
 ##### Technology
 CSS breakpoints
