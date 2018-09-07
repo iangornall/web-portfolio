@@ -126,6 +126,7 @@ html, body {
   justify-content: center;
   background-color: var(--lt-orange);
   color: var(--dk-blue);
+  padding: 50px 5px;
 }
 
 .about-contents {
