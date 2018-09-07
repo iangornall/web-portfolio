@@ -489,6 +489,28 @@ figure {
   border-radius: 50%;
   cursor: pointer;
   transition: transform 300ms;
+  text-align: center;
+}
+
+.modal-close {
+  position: absolute;
+  left: 100%;
+  bottom: 100%;
+  width: 2em;
+  height: 2em;
+  background: var(--dk-orange);
+  color: var(--white-orange);
+  padding: 0.5em;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 300ms;
+  transform: translate(-100%, -25%);
+}
+.fa-times {
+  transform: translateX(15%);
+}
+.modal-close:hover {
+  transform: scale(1.5) translate(-62.5%, -18.75%);
 }
 
 .modal-up {
@@ -595,5 +617,11 @@ figure {
   }
   .modal {
     flex-direction: row;
+  }
+  .modal-close {
+    transform: translate(25%, -25%)
+  }
+  .modal-close:hover {
+    transform: scale(1.5) translate(18.75%, -18.75%);
   }
 }

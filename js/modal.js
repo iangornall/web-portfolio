@@ -133,6 +133,13 @@ projectData.forEach((project, index) => {
   modalDownArrowContainer.appendChild(modalDown);
   modal.appendChild(modalDownArrowContainer);
 
+  var modalCloseContainer = document.createElement('div');
+  modalCloseContainer.classList.add('modal-close');
+  var modalClose = document.createElement('i');
+  modalClose.classList.add('fas', 'fa-times');
+  modalCloseContainer.appendChild(modalClose);
+  modal.appendChild(modalCloseContainer);
+
   modalUpArrowContainer.addEventListener('click', () => {
     hideModal();
     showModal((projectData.length + index - 1) % projectData.length);
@@ -142,6 +149,8 @@ projectData.forEach((project, index) => {
     hideModal();
     showModal((index + 1) % projectData.length);
   });
+
+  modalCloseContainer.addEventListener('click', hideModal)
 
   modalContainer.appendChild(modal);
 });
