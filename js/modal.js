@@ -83,7 +83,6 @@ projectData.forEach((project, index) => {
     var devIconBox = document.createElement('div');
     devIconBox.classList.add('dev-icon-box');
     var devIconElement = document.createElement('i');
-    console.log(devIcon, devicons[devIcon])
     devIconElement.classList.add(devicons[devIcon].icon, 'dev-icon');
     devIconBox.appendChild(devIconElement);
     var devIconText = document.createElement('p');
