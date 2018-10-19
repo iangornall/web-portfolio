@@ -56,7 +56,7 @@ var devicons = {
 var projectData = [
   { image: 'images/diyhub.png',
     thumbnail: 'images/diyhub-thumb.png',
-    video: '',
+    video: 'https://www.youtube.com/embed/mHAlgJ0qLPQ?rel=0',
     name: 'DIYHub',
     links: [
       {name: 'Live Site', src: 'http://www.diyhub.fun'},
