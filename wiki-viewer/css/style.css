@@ -1,0 +1,20 @@
+body{
+  text-align: center;
+}
+header{
+  padding: 20px;
+}
+h2{
+  font-size: 1.25em;
+}
+.card{
+  max-width: 800px;
+  width: 90%;
+  margin: 20px auto;
+}
+.description{
+  text-align: left;
+}
+footer{
+  margin-top: 20px;
+}

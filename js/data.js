@@ -50,10 +50,24 @@ var devicons = {
   react: {
     icon: 'devicon-react-original',
     text: 'React.js'
-  }
+  },
 }
 
 var projectData = [
+  { image: 'images/diyhub.png',
+    thumbnail: 'images/diyhub-thumb.png',
+    video: '',
+    name: 'DIYHub',
+    links: [
+      {name: 'Live Site', src: 'http://www.diyhub.fun'},
+      {name: 'Github', src: 'https://github.com/marberrym/DIYHub'}
+    ],
+    description: ['Collaboration built with React / Redux / Express / PostgreSQl.', 'Personal Responsibilities:'],
+    list: ['Implemented material search using Amazon Product Advertising API', 'Handled image previews with state and lifecycle methods in React', 'Used Redux to handle global state, i.e. user status', 'Created custom middleware for image resizing with Sharp from image uploads handled by Multer', 'Made dynamic queries for data across join tables'],
+    devicons: [
+      'react', 'nodejs', 'express', 'postgresql', 'git'
+    ]
+  },
   { image: 'images/color-addiction.png',
     thumbnail: 'images/color-addiction-thumb.png',
     video: '',

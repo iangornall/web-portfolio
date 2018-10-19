@@ -1,0 +1,70 @@
+.container{
+  background: #55C1FF;
+  width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #102E4A;
+  border-radius: 20px;
+  font-family: 'Space Mono', monospace;
+  color: #102E4A;
+  box-shadow: 5px 10px;
+}
+h1{
+  font-size: 1.25em;
+}
+#screen{
+  background: #FFF;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #102E4A;
+  text-align: right;
+  border-radius: 10px;
+  overflow: auto;
+}
+#display{
+  font-size: 3em;
+}
+
+button {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.25em;
+  width: 60px;
+  margin: 3px;
+  height: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #FFF;
+  background: #102E4A;
+  border: none;
+  box-shadow: 2px 4px #5887FF;
+}
+button:focus {
+  outline: 0;
+}
+button:active{
+  transform: translate(2px, 4px);
+  box-shadow: none;
+}
+
+#pad {
+  margin: auto;
+}
+
+.row {
+  position: relative;
+}
+
+#ac, #ce {
+  background: #715AFF;
+}
+
+#equals {
+  height: 106px;
+  position: absolute;
+  right: 7px;
+  z-index: 1;
+}
+
+#zero {
+  width: 136px;
+}
