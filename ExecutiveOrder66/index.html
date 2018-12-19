@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HGA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css?3" />
+    <link rel="stylesheet" type="text/css" media="screen" href="modal.css?3" />
+    <link rel="shortcut icon" type="image/png" href="images/LODFav.png" />
+    <link href="https://fonts.googleapis.com/css?family=Aguafina+Script|Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nosifer" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+
+</head>
+<body class="mainbody">
+    <button class="nightmode">
+        <img class="colormodeicon" src="images/nightmode.png">
+    </button>
+    <button class="legion">
+        <img class="colormodeicon" src="images/LOD.png">
+    </button>
+    <form action="" id="loginForm" class="loginmodal">
+        <div class="loginmodal loginbox">
+            <div class="loginbasis">
+                <input id="txtEmail" type="email" placeholder="Your Email" class="loginInput searchbar">
+                <input id="txtPassword" type="password" placeholder="password" class="loginInput searchbar">
+            </div>
+            <div class="loginbasis">
+                <button id="btnLogin" class="buttonclass nextprev" type="submit">Log In</button>
+                <button id="btnLogout" class="buttonclass nextprev hide" type="reset">Log Out</button>
+                <button class="buttonclass nextprev" name="signUp" id="btnSignUp" type="menu">Sign Up</button>
+            </div>
+        </div>
+    </form>
+    <div class="mainflex">
+            <div class="modaloutter3">
+                <div class="modalLOD">
+                    <div class="submissionform">
+                        <p class="eviltext">Deep within a bleak and murky swamp, hidden beneath its dismal waters lies the headquarters of the most sinister villains of all time...</p>
+                        <img class="modalLODImage" src="images/group.jpg">
+                        <p class="eviltext">Gathered to plot the downfall of their arch-nemeses: The Super Friends!</p>
+                        <a class="eviltext" href="https://www.youtube.com/watch?v=4hZ-il7Ey9I">Would you like to know more?</a>
+                    </div>
+                </div>
+            </div>
+            <div class="modaloutter2">
+                <div class="modalcontent2">
+                    <form action="" class="submissionform signup">
+                        <div class="thankyou">Thank you for signing up with Hidden Gem Atlanta!</div>
+                        <label>
+                            <span>First Name:</span>
+                            <input type="text" class="usernameinput" name="userfirstname" required>
+                        </label>
+                        <label>
+                            <span>Last Name:</span>
+                            <input  type="text" class="usernameinput" name="userlastname" required>
+                        </label>
+                        <label>
+                            <span>Email Address:</span>
+                            <input type="email" class="usernameinput" name="useremail" required>
+                        </label>
+                        <label>
+                            <span>Password:</span>
+                            <input type="password" class="usernameinput" name="userpassword" required>
+                        </label>
+                        <label>
+                            <span>Deepest Darkest Secret:</span>
+                            <input type="text" class="usernameinput" name="usersecret" required>
+                        </label>
+                        <button class="buttonclass" name="btnSignup" type="submit">Sign Up!</button>  
+                    </form>
+                    <button class="closebutton" name="closebutton2">&chi;</button>
+                </div>
+            </div>      
+        
+            <div class="modaloutter">
+                    <div class="modalcontent">
+                        <form action="" class="submissionform newpost">
+                            <label>
+                                <span>Your Name:</span>  
+                                <input class="usernameinput" name="author" required>
+                            </label>
+
+                            <label>
+                                <span>Place Name:</span>  
+                                <input class="locationinput" name="placeName" required>
+                            </label>
+
+                            <label>
+                                <span>Place Type:</span>
+                                <select name="placeType" class="placeType">
+                                    <option value="fnb">Food And Beverage</option>
+                                    <option value="retail">Retail</option>
+                                    <option value="scenic">Scenic</option>
+                                    <option value="venue">Venue</option>
+                                </select>
+                            </label>
+                            <label class="ratinglabel">
+                                <img name="gem1" class="ratinggem" src="images/unclickedgem.png">
+                                <img name="gem2" class="ratinggem" src="images/unclickedgem.png">
+                                <img name="gem3" class="ratinggem" src="images/unclickedgem.png">
+                                <img name="gem4" class="ratinggem" src="images/unclickedgem.png">
+                                <img name="gem5" class="ratinggem" src="images/unclickedgem.png">   
+                            </label>
+                            <label>
+                                <span>Experience:</span>  
+                                <textarea class="experienceinput" name="placeExperience" required></textarea>
+                            </label>
+                            <button class="newgembutton" type="submit">Submit Your Gem!</button>  
+                        </form>
+                        <button class="closebutton" name="closebutton">&chi;</button>
+                    </div>
+                </div>
+
+        <div class="mainlogo">
+            <img class="logo" src="images/gemBGwText.png">
+        </div>
+        <div class="searchfunction">
+            <input name="searchInput" class="searchbar" type="text" placeholder="Search Gems by Keyword">
+        </div>
+        <div class="buttons">
+            <button name="submit" id="btnPostSubmit" class="buttonclass hide flexBTN" type="button" value="Post">Post New Gem</button>
+            <select name="filterByType" class="buttonclass flexBTN">
+                <option value="">Type: All</option>
+                <option value="fnb">Food And Beverage</option>
+                <option value="retail">Retail</option>
+                <option value="scenic">Scenic</option>
+                <option value="venue">Venue</option>
+            </select>
+            <select name="filterByRating" class="buttonclass flexBTN">
+                <option value="">Gem Rating: All</option>
+                <option value="0">No Gems</option>
+                <option value="1">1 Gem</option>
+                <option value="2">2 Gems</option>
+                <option value="3">3 Gems</option>
+                <option value="4">4 Gems</option>
+                <option value="5">5 Gems</option>
+            </select>
+        </div>
+        <div class="nav-buttons">
+            <button class="previous buttonclass nextprev">Previous</button>
+            <button class="next buttonclass nextprev">Next</button>
+        </div>
+        <div class="postbody">
+            <!-- <div class="post">
+                <img class="googleIMG" src="images/krogst.jpg">
+                <div class="posttext">
+                    <div class="location">Krog Street Tunnel</div>
+                    <div class="author">Scenic location submitted by Matthew</div>
+                    <div class="postcontent">
+                        I had a great experience when I got mugged by a group of homeless
+                        raspberries.  Then a cat urinated on my head.  A dog ate my shoes.
+                    </div>
+                    <div class="rating">
+                        <img class="ratinggem" src="images/gem3.png">
+                        <img class="ratinggem" src="images/gem3.png">
+                        <img class="ratinggem" src="images/gem3.png">
+                        <img class="ratinggem" src="images/gem3.png">
+                        <img class="ratinggem" src="images/gem3.png">
+                    </div>
+                    <div class="datetime"></div>
+                </div>
+                <img class="googleIMG" src="images/Mapsample.jpg">
+                <div class="buttonclass deletePost">Delete</div>
+            </div> -->
+            
+        </div>
+        <div class="nav-buttons">
+            <button class="previous buttonclass nextprev">Previous</button>
+            <button class="next buttonclass nextprev">Next</button>
+        </div>
+    </div>
+    <script src="rating.js"></script>
+    <script src="keys.js"></script>
+    <script src="google.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+    <script src="domdadom.js?3"></script>
+    <script src="firebase.js?3"></script>
+    <script src="fireauth.js?3"></script>
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>    
+    <script src="modal.js?3"></script>
+    <script src="main.js?3"></script>
+</body>
+</html>

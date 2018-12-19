@@ -1,0 +1,417 @@
+.mainbody {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/BGblack2.jpg');
+    background-repeat: repeat;
+}
+
+.daytimebody {
+    background-image: url('images/WhiteBG2.png');
+}
+
+.mainlogo {
+    text-align: center;
+    height: 200px;
+    margin-top: 8%;
+    padding-top: 60px;
+    margin-bottom: 10%;
+}
+
+.logo {
+    max-width: 100%;
+}
+
+.mainflex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.searchbar {
+    width: 40%;
+    height: 30px;
+    text-align: right;
+    border-style: none;
+    border-radius: 2px;
+    padding-right: 5px;
+    border: 2px solid #383737;
+}
+
+.daytimeSearch {
+    border: 2px solid #383737;
+    border-radius: 2px;
+}
+
+.searchbar:focus{
+   outline: none;
+}
+.searchfunction {
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.buttonclass {
+    height: 50px;
+    font-size: 16px;
+    width: 150px;
+    font-family: 'Lobster', cursive;
+    margin-right: 5px;
+    background: linear-gradient(to bottom, #a90329 0%,#8f0222 46%,#6d0019 100%);
+    border: 3px solid whitesmoke;
+    color: whitesmoke;
+    border-radius: 5px;
+    transition: ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.buttonclass:hover {
+    border: 3px solid #383737;
+    text-shadow:
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
+}
+
+.daytimeBTN {
+    color: black;
+    background: linear-gradient(to bottom, #ec2352 0%,#eb0f42 46%,#a00f31 100%);
+    border: 3px solid #383737;
+}
+
+.daytimeBTN:hover {
+    border: 3px solid whitesmoke;
+    text-shadow:
+        -1px -1px 0 whitesmoke,
+        1px -1px 0 whitesmoke,
+        -1px 1px 0 whitesmoke,
+        1px 1px 0 whitesmoke;
+
+}
+
+.buttonclass:focus {
+    outline: none;
+}
+
+.postbody {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.post {
+    position: relative;
+    padding: 10px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    opacity: .90;
+    margin: 20px;
+    background: linear-gradient(to bottom, #a90329 0%,#8f0222 46%,#6d0019 100%);
+    border: 10px solid whitesmoke;
+    height: 100%;
+    background-origin: unset;
+    border-radius: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.daytimePosts {
+    position: relative;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #ec2352 0%,#eb0f42 46%,#a00f31 100%);
+    border: 10px solid #383737;
+    padding: 10px;
+    width: 90%;
+    display: flex;
+    opacity: .90;
+    margin: 20px;
+    height: 100%;
+    background-origin: unset;
+    border-radius: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.location {
+    font-size: 32px;
+    margin: 10px;
+    padding-top: 20px;
+    font-family: 'Lobster', cursive;
+    text-shadow:
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+}
+
+.author {
+    font-size: 20px;
+    margin: 10px;
+    font-family: 'Lobster', cursive;
+    text-shadow:
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+}
+
+.postcontent {
+    margin: 10px;
+    padding-top: 10px;
+    word-break: break-word;
+    font-size: 18px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: 'Cabin', semi-bold;
+    background: rgba(245, 245, 245, 0.8);
+    border-radius: 15px;
+    padding: 10px;
+
+}
+
+.ratinggem {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    padding: 5px;
+}
+
+.posttext {
+    display: flex;
+    width: 90%;
+    margin: 0 5%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.googleIMG {
+    height: 250px;
+    width: 250px;
+    margin: 30px;
+    border: 2px solid black;
+    border-radius: 15px;
+    overflow: hidden;
+    flex: none;
+}
+
+label {
+    font-size: 16px;
+    font-family: 'Lobster', cursive;
+}
+
+.datetime {
+    font-size: 16px;
+    margin: 10px;
+    color: whitesmoke;
+    font-family: 'Cabin', semi-bold;
+    margin-bottom: 20px;
+    text-shadow:
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
+}
+
+.previous, .next {
+    cursor: pointer;
+}
+
+.post-button-container {
+    position: absolute;
+    top: 0.4em;
+    right: 0.2em;
+    display: flex;
+}
+
+.post-button {
+    width: auto;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.2em;
+    line-height: 1em;
+}
+
+.hide {
+    display: none;
+}
+
+.loginmodal {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.nightmode {
+    background-color: rgba(245, 245, 245, 0.758);
+    border: 2px solid #383737;
+    margin-top: 5px;
+    position: fixed;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+.nightmode:focus {
+    outline: none;
+}
+
+.nav-buttons {
+    text-align: right;
+    margin-right: 30%;
+}
+
+.nextprev {
+    font-size: 14px;
+    height: 25px;
+    width: 70px;
+}
+
+.colormodeicon {
+    height: 50px;
+}
+
+.flashMessage {
+    position: fixed;
+    padding: 1em;
+    top: 0.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    transition-property: opacity;
+    transition-duration: 1s;
+    opacity: 1;
+    background: linear-gradient(to bottom, #a90329 0%,#8f0222 46%,#6d0019 100%);
+    border: 3px solid whitesmoke;
+    color: whitesmoke;
+    border-radius: 5px;
+    z-index: 3;
+    pointer-events: none;
+}
+.flashMessage-hidden {
+    opacity: 0;
+}
+
+.flexBTN {
+    flex: 1;
+    margin: 5px;
+    
+}
+
+@media (min-width: 768px) {
+    .post {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .daytimePosts {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .posttext {
+        order: 1;
+        flex: 1;
+        flex-basis: 100%;
+    }
+    .ratinggem {
+        height: 40px;
+        padding: 10px;
+    }
+    .newgembutton {
+        width: 50%; 
+    }
+    .nav-buttons{
+        margin-right: 3%;
+    }
+    .buttons {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    .flexBTN {
+        flex: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .post {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: stretch;
+    }
+    .daytimePosts {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: stretch;
+    }
+    .posttext {
+        order: 0;
+        flex: initial;
+    }
+    .ratinggem {
+        height: 50px;
+        padding: 15px;
+    }
+    .newgembutton {
+        width: 30%; 
+    }
+    .nav-buttons{
+        margin-right: 3.5%;
+    }
+}
+
+.loginInput {
+    height: 25px;
+    width: 80px;
+    margin: 5px;
+}
+
+ .loginbox {
+    padding: 5px;
+    padding-left: 2px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    width: relative;
+    position: fixed;
+    background-color: rgba(245, 245, 245, 0.758);
+    border: 1px solid #383737;
+    border-radius: 5px;
+    display: flex;
+    z-index: 1;
+}
+
+.loginbasis {
+    text-align: right;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.legion {
+    background-color: rgba(245, 245, 245, 0.758);
+    border: 2px solid #383737;
+    margin-top: 75px;
+    position: fixed;
+    border-radius: 3px;
+    z-index: 1;
+}
+.legion:focus {
+    outline: none;
+}
+
