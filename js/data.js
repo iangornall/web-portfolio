@@ -54,6 +54,19 @@ var devicons = {
 }
 
 var projectData = [
+  { image: 'images/ninja-game.png',
+    thumbnail: 'images/ninja-game-thumb.png',
+    name: 'Ninja vs Zombies',
+    links: [
+      {name: 'Live Site', src: 'https://iangornall.github.io/ninja-game/'},
+      {name: 'Github', src: 'https://github.com/iangornall/ninja-game'}
+    ],
+    description: ['A platformer built with Phaser 3.  Independent Project', 'Accomplishments:'],
+    list: ['Implemented a gaming library built with object oriented javascript', 'Built multiple scenes to display loader using scene manager', 'Tweaked physics to work with large sprites', 'Used tiled to create levels with multiple layers and objects', 'Created tween animations', 'Added sounds and music'],
+    devicons: [
+      'javascript', 'html'
+    ]
+  },
   { image: 'images/diyhub.png',
     thumbnail: 'images/diyhub-thumb.png',
     video: 'https://www.youtube.com/embed/mHAlgJ0qLPQ?rel=0',
