@@ -2,9 +2,17 @@ var navButtons = document.querySelectorAll('.nav-link');
 var profileLink = document.querySelector('.profile-link');
 var sections = document.querySelectorAll('section');
 var headerHeight = document.querySelector('.header').offsetHeight;
-var scrollingContent = document.querySelector('.content-and-footer');
+var scrollingContent = document.querySelector('body');
 var headerPortrait = document.querySelector('.header-portrait');
 var portrait = document.querySelector('.about-portrait');
+
+var navBarIcon = document.querySelector('.bars');
+var navBar = document.querySelector('.nav-bar')
+
+navBarIcon.addEventListener('click', () => {
+    navBar.classList.toggle('show');
+});
+
 var scrollingLinkHandler = (event) => {
     event.preventDefault();
     scrollTransition(event.currentTarget.getAttribute('href').slice(1));
@@ -32,10 +40,7 @@ scrollingContent.addEventListener('scroll', function(e){
 });
 
 document.querySelector('.bars').addEventListener('click', function (){
-    document.querySelector('.nav-bar').classList.toggle('nav-bar-show');
-});
-
-document.querySelector('.nav-bar').addEventListener('click', function (event){
+    console.log('clicked');
     document.querySelector('.nav-bar').classList.toggle('nav-bar-show');
 });
 
