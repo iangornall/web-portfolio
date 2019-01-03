@@ -54,6 +54,19 @@ var devicons = {
 }
 
 var projectData = [
+  { image: 'images/gemini-group.png',
+    thumbnail: 'images/gemini-group-thumb.png',
+    name: 'Gemini Group',
+    links: [
+      {name: 'Live Site', src: 'https://www.geminigroupatl.com/'},
+      {name: 'Github', src: 'https://github.com/iangornall/gemini-group'}
+    ],
+    description: ['A professional website for a rent to own company, built independently', 'Features:'],
+    list: ['Coded using React with reusable components', 'Web forms directly linked to Google Sheets', 'Backend and content management with Podio and Globiflow', 'Responsive design using flexbox and React state'],
+    devicons: [
+      'javascript', 'html'
+    ]
+  },
   { image: 'images/ninja-game.png',
     thumbnail: 'images/ninja-game-thumb.png',
     name: 'Ninja vs Zombies',
